@@ -1,2 +1,14 @@
 ---
-# handlers file for nginx
+  - name: start_nginx
+    service:
+      name: nginx
+      enabled: true
+      state: started
+    when: nginx_purge is not defined or not nginx_purge
+
+  - name: restart_nginx
+    service:
+      name: nginx
+      enabled: true
+      state: restarted
+    when: nginx_purge is not defined or not nginx_purge

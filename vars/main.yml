@@ -1,2 +1,6 @@
 ---
-# vars file for nginx
+  ssh_port: "{{ ansible_port }}"
+  nginx_version: "1.10.3"
+
+  nginx_packages:
+    - { name: "nginx", version: "{{ nginx_version }}", state: "present" }

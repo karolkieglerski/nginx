@@ -1,2 +1,11 @@
 ---
-# tasks file for nginx
+  - include_tasks: install.yml
+    when: nginx_purge is not defined or not nginx_purge
+
+  - include_tasks: configure.yml
+    when: nginx_purge is not defined or not nginx_purge
+
+  - include_tasks: purge.yml
+    when:
+      - nginx_purge is defined
+      - nginx_purge
