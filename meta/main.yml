@@ -1,6 +1,6 @@
 galaxy_info:
   author: Karol Kieglerski
-  description: Role for monitor and set restricio on connection by fail2ban.
+  description: Role install and configure nginx.
 
   license: BSD
 
@@ -23,6 +23,6 @@ galaxy_info:
       versions:
       - all
 
-  galaxy_tags: [fail2ban, ssh, http, https, security]
+  galaxy_tags: [nginx, http, https]
 
 dependencies: []
